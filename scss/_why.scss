@@ -1,0 +1,44 @@
+@import "../scss/queries";
+
+$color-yellow: #f2d602 !important;
+$color-overlay: rgb(0, 24, 33, 0.7);
+$color-background: #182837 !important;
+$color-background-1: #1c5f7c !important;
+$color-background-copy: #2f3d4b !important;
+
+.border-black {
+  height: 3px;
+  width: 80px;
+  background-color: #182837;
+}
+
+#top2 {
+  background-color: #182837 !important;
+
+  .number {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #f2d602;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+  }
+}
+
+#expertise,
+#meet-experts,
+#request {
+  a {
+    @include respond(tab-port) {
+      font-size: 12px !important;
+    }
+  }
+}
+
+#meet-experts {
+  .card {
+    height: 620px !important;
+  }
+}

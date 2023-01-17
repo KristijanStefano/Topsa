@@ -1,0 +1,53 @@
+//MEDIA QUERY MANAGER
+/*
+0-600px: Phone
+600-900px: Tablet portrait
+900-1200px: Tablet landscape
+1200-1800px: Laptop
++ 1800px: Desktop PC
+
+$brakepoint argument choises
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+// Import file
+// @import "../base/media-queries";
+
+// Include file
+// @include respond(tab-land) {
+// }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 33.75em) {
+      @content;
+    } //500px 540
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 45em) {
+      @content;
+    } //600px 720
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 60em) {
+      @content;
+    } //900px 960
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 71.25em) {
+      @content;
+    } //1200px 1140
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}
